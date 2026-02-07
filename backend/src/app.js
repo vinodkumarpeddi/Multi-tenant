@@ -33,7 +33,7 @@ app.use('/api/projects', require('./routes/projects'));
 
 // Global Task Routes (PUT/PATCH/DELETE /api/tasks/:id)
 const tasksRouter2 = require('express').Router();
-const { taskController } = require('./controllers/taskController');
+const taskController = require('./controllers/taskController');
 const { protect } = require('./middleware/authMiddleware');
 
 tasksRouter2.patch('/:taskId/status', protect, taskController.updateTaskStatus);
