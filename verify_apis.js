@@ -2,7 +2,7 @@ const axios = require('axios');
 const { faker } = require('@faker-js/faker'); // Optional: using faker if available, else standard random
 require('dotenv').config();
 
-const API_URL = process.env.API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.API_URL || 'http://localhost:5001/api';
 let tenantAdminToken = '';
 let tenantId = '';
 let projectId = '';

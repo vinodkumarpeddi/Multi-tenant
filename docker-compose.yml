@@ -22,7 +22,7 @@ services:
     build: ./backend
     container_name: backend
     ports:
-      - "5000:5000"
+      - "5001:5000"
     environment:
       DB_HOST: database
       DB_PORT: 5432
@@ -30,7 +30,7 @@ services:
       DB_USER: postgres
       DB_PASSWORD: postgres
       JWT_SECRET: supersecretjwtkeychangeinproduction
-      FRONTEND_URL: http://frontend:3000
+      FRONTEND_URL: http://localhost:3001
     depends_on:
       database:
         condition: service_healthy
@@ -44,9 +44,9 @@ services:
     build: ./frontend
     container_name: frontend
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
-      VITE_API_URL: http://backend:5000/api
+      VITE_API_URL: http://localhost:5001/api
     depends_on:
       backend:
         condition: service_healthy
