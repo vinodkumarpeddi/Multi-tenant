@@ -13,7 +13,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -22,7 +22,7 @@ services:
     build: ./backend
     container_name: backend
     ports:
-      - "5000:5000"
+      - "5001:5000"
     environment:
       DB_HOST: database
       DB_PORT: 5432
@@ -35,7 +35,7 @@ services:
       database:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      test: [ "CMD", "curl", "-f", "http://localhost:5000/api/health" ]
       interval: 10s
       timeout: 5s
       retries: 5

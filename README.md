@@ -32,13 +32,13 @@ A production-ready, multi-tenant SaaS application built with Node.js, Express, R
     ```
     This command will:
     - Start the PostgreSQL database.
-    - Build and start the Backend API (running on port 5000).
+    - Build and start the Backend API (running on port 5001).
     - Build and start the Frontend (running on port 3000).
     - Automatically run database migrations and seed initial data.
 
 3.  **Access the Application**:
     - **Frontend**: [http://localhost:3000](http://localhost:3000)
-    - **Backend API**: [http://localhost:5000](http://localhost:5000)
+    - **Backend API**: [http://localhost:5001](http://localhost:5001)
 
 ## Default Credentials
 
