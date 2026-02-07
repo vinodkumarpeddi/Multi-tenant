@@ -1,0 +1,23 @@
+{
+    "project_name": "Multi-Tenant SaaS Platform",
+    "version": "1.0.0",
+    "description": "A production-ready Multi-Tenant SaaS application with RBAC, Tenant Isolation, and Project/Task management.",
+    "tech_stack": {
+        "backend": "Node.js, Express, PostgreSQL",
+        "frontend": "React, Vite, Tailwind CSS",
+        "infrastructure": "Docker, Docker Compose"
+    },
+    "features": [
+        "Multi-tenancy via Shared Database, Shared Schema (Tenant ID isolation)",
+        "Tenant Registration & Subdomain Management",
+        "Authentication (JWT) & RBAC (Super Admin, Tenant Admin, User)",
+        "Project Management (CRUD)",
+        "Task Management (CRUD, Status, Priority)",
+        "User Management (Invite/Add Users)",
+        "Dashboard with Stats and Analytics",
+        "Audit Logging",
+        "Dockerized Environment"
+    ],
+    "author": "Antigravity Agent",
+    "deployment_instructions": "Run `docker-compose up --build` to start the entire stack."
+}
